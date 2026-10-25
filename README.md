@@ -4,6 +4,10 @@ Manage your Haas+Sohn pellet stove from Homey over your local network. The app s
 
 Use Homey to switch the stove on or off, set the target temperature, toggle eco mode or the weekly program, and keep track of pellet levels. To get started, enter the stove's IP address or hostname and the PIN configured on the controller. Inspired by [ioBroker.hass](https://github.com/ioBroker/ioBroker.hass).
 
+### Community and support
+
+Questions, feedback, and discussion: [Haas+Sohn Pellets on the Homey Community Forum](https://community.homey.app/t/app-pro-haas-sohn-pellets-control-and-monitor-haas-sohn-pellet-stoves-in-homey/150444).
+
 ### ☕ Support Development
 
 This app is developed and maintained in my spare time and shared freely with the Homey community.
