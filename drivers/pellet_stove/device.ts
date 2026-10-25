@@ -275,6 +275,14 @@ module.exports = class PelletStoveDevice extends Homey.Device {
     await this.handlePelletsOverride(value);
   }
 
+  getWidgetErrorMessage(): string | null {
+    return this.lastErrorMessage;
+  }
+
+  getWidgetPelletCapacity(): number {
+    return this.pelletsMaxKg;
+  }
+
   async setWeeklyProgramFromFlow(value: unknown) {
     await this.handleWeekProgram(value);
   }

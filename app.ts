@@ -10,6 +10,17 @@ module.exports = class MyApp extends Homey.App {
   async onInit() {
     this.log('Haas+Sohn stove app has been initialized');
     this.registerFlowCards();
+    this.registerStoveWidget();
+  }
+
+  private registerStoveWidget() {
+    this.homey.dashboards.getWidget('stove').registerSettingAutocompleteListener('stove', async (query) => {
+      const driver = this.homey.drivers.getDriver('pellet_stove');
+      await driver.ready();
+      return driver.getDevices()
+        .map((device) => ({ name: device.getName(), id: device.getData().id }))
+        .filter((device) => device.name.toLowerCase().includes(query.toLowerCase()));
+    });
   }
 
   private registerFlowCards() {

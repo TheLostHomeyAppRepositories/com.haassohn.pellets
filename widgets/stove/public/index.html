@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Haas+Sohn pellet stove</title>
+    <link rel="stylesheet" href="widget.css">
+  </head>
+  <body class="homey-widget-full">
+    <main id="widget" aria-busy="true">
+      <div id="widget-content">
+        <header class="header">
+          <div class="stove-photo" aria-hidden="true"></div>
+          <div class="heading">
+            <h1 id="name">Pellet stove</h1>
+            <p class="status"><span id="status-dot" class="dot"></span><span id="status">Loading…</span></p>
+          </div>
+          <button id="power" class="power" type="button" disabled aria-label="Turn stove on" aria-pressed="false"><span id="power-label">—</span></button>
+        </header>
+        <section id="temperatures" class="temperatures" aria-label="Temperature">
+          <div class="current">
+            <p class="caption" data-i18n="current">Current</p>
+            <p class="reading"><bdi><span id="temperature">—</span><span class="unit">°C</span></bdi></p>
+          </div>
+          <button id="edit-target" class="target" type="button" disabled aria-label="Edit target temperature" aria-haspopup="dialog" aria-controls="target-editor">
+            <span class="target-reading"><span class="caption" data-i18n="target">Target</span><span class="reading"><bdi><span id="target-value">—</span><span class="unit">°C</span></bdi></span></span>
+            <span id="edit-mark" class="edit-mark" aria-hidden="true">✎</span>
+          </button>
+        </section>
+        <p id="weekly" class="notice" hidden data-i18n="weekly_program">Weekly program controls the target temperature.</p>
+        <section id="pellet-section" class="pellets" aria-label="Pellets">
+          <div class="flames" aria-hidden="true"></div>
+          <div class="pellet-heading">
+            <p class="caption" data-i18n="remaining">Pellets · estimate</p>
+            <p class="pellet-value"><bdi><span id="pellets">—</span><span class="small-unit" data-i18n="kg">kg</span></bdi></p>
+          </div>
+          <div id="pellet-meter" class="meter" role="progressbar" aria-label="Remaining pellets" aria-valuemin="0"><div id="pellet-fill"></div></div>
+          <div class="reset-buttons">
+            <button id="half" class="reset" type="button" disabled><span data-i18n="half">Half full</span><bdi id="half-value" class="reset-amount">15 kg</bdi></button>
+            <button id="full" class="reset" type="button" disabled><span data-i18n="full">Full</span><bdi id="full-value" class="reset-amount">30 kg</bdi></button>
+          </div>
+        </section>
+        <section id="fault" class="fault" hidden aria-live="polite">
+          <details id="fault-details"><summary><i class="icon error-icon" aria-hidden="true"></i><span id="fault-title"></span></summary><p id="fault-message"></p></details>
+        </section>
+      </div>
+      <div id="target-editor" class="editor-overlay" hidden>
+        <section id="target-dialog" class="editor" role="dialog" aria-modal="true" aria-labelledby="editor-title" tabindex="-1">
+          <h2 id="editor-title" data-i18n="set_target">Set temperature</h2>
+          <div class="stepper">
+            <button id="minus" type="button" disabled aria-label="Lower target temperature">−</button>
+            <div class="target-input"><input id="target" type="number" inputmode="decimal" min="5" max="35" step="1" required disabled aria-label="Target temperature"><span>°C</span></div>
+            <button id="plus" type="button" disabled aria-label="Raise target temperature">+</button>
+          </div>
+          <div class="editor-actions"><button id="cancel" type="button" data-i18n="cancel">Cancel</button><button id="save" class="save" type="button" disabled data-i18n="apply">Apply</button></div>
+        </section>
+      </div>
+      <p id="message" class="message" role="status" aria-live="polite" hidden></p>
+    </main>
+    <script src="widget.js"></script>
+  </body>
+</html>

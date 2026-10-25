@@ -154,6 +154,9 @@
   },
   "contributing": {
     "donate": {
+      "githubSponsors": {
+        "username": "shaarkys"
+      },
       "paypal": {
         "username": "bkubesa"
       }
@@ -1313,6 +1316,147 @@
       "id": "pellet_stove"
     }
   ],
+  "widgets": {
+    "stove": {
+      "name": {
+        "en": "Pellet stove",
+        "nl": "Pelletkachel",
+        "de": "Pelletofen",
+        "fr": "Poêle à granulés",
+        "it": "Stufa a pellet",
+        "sv": "Pelletkamin",
+        "no": "Pelletovn",
+        "es": "Estufa de pellets",
+        "da": "Pilleovn",
+        "ru": "Пеллетная печь",
+        "pl": "Piec na pellet",
+        "ko": "펠릿 난로",
+        "ar": "موقد حبيبات"
+      },
+      "height": 260,
+      "settings": [
+        {
+          "id": "stove",
+          "type": "autocomplete",
+          "title": {
+            "en": "Stove",
+            "nl": "Kachel",
+            "de": "Ofen",
+            "fr": "Poêle",
+            "it": "Stufa",
+            "sv": "Kamin",
+            "no": "Ovn",
+            "es": "Estufa",
+            "da": "Ovn",
+            "ru": "Печь",
+            "pl": "Piec",
+            "ko": "난로",
+            "ar": "الموقد"
+          },
+          "hint": {
+            "en": "Select a paired Haas+Sohn stove.",
+            "nl": "Selecteer een gekoppelde Haas+Sohn kachel.",
+            "de": "Einen gekoppelten Haas+Sohn Ofen auswählen.",
+            "fr": "Sélectionnez un poêle Haas+Sohn appairé.",
+            "it": "Seleziona una stufa Haas+Sohn associata.",
+            "sv": "Välj en parkopplad Haas+Sohn-kamin.",
+            "no": "Velg en paret Haas+Sohn-ovn.",
+            "es": "Selecciona una estufa Haas+Sohn emparejada.",
+            "da": "Vælg en parret Haas+Sohn-ovn.",
+            "ru": "Выберите сопряжённую печь Haas+Sohn.",
+            "pl": "Wybierz sparowany piec Haas+Sohn.",
+            "ko": "페어링된 Haas+Sohn 난로를 선택하세요.",
+            "ar": "اختر موقد Haas+Sohn مقترنًا."
+          }
+        },
+        {
+          "id": "half_full_kg",
+          "type": "number",
+          "title": {
+            "en": "Half full (kg)",
+            "nl": "Halfvol (kg)",
+            "de": "Halbvoll (kg)",
+            "fr": "À moitié plein (kg)",
+            "it": "Mezzo pieno (kg)",
+            "sv": "Halvfull (kg)",
+            "no": "Halvfull (kg)",
+            "es": "Medio llena (kg)",
+            "da": "Halvfuld (kg)",
+            "ru": "Наполовину заполнено (кг)",
+            "pl": "W połowie pełny (kg)",
+            "ko": "반만 채움 (kg)",
+            "ar": "نصف ممتلئ (كغ)"
+          },
+          "hint": {
+            "en": "Set the remaining estimate to this amount. Whole kilograms, within the stove's configured pellet capacity.",
+            "nl": "Stel de resterende schatting in op dit aantal hele kilogrammen, binnen de ingestelde pelletcapaciteit.",
+            "de": "Restmenge auf diesen Wert setzen. Ganze Kilogramm innerhalb der eingestellten Pelletkapazität.",
+            "fr": "Définissez l’estimation restante. Kilogrammes entiers, dans la capacité de granulés configurée du poêle.",
+            "it": "Imposta la stima residua. Chilogrammi interi, entro la capacità pellet configurata della stufa.",
+            "sv": "Ange den återstående uppskattningen. Hela kilogram inom kaminens konfigurerade pelletskapacitet.",
+            "no": "Angi gjenværende estimat. Hele kilogram innenfor ovnens konfigurerte pelletkapasitet.",
+            "es": "Establece la estimación restante. Kilogramos enteros, dentro de la capacidad de pellets configurada.",
+            "da": "Angiv restestimatet. Hele kilogram inden for ovnens konfigurerede pillekapacitet.",
+            "ru": "Задайте расчётный остаток. Целые килограммы в пределах настроенной вместимости печи.",
+            "pl": "Ustaw szacowaną ilość pozostałą. Całe kilogramy w granicach skonfigurowanej pojemności pieca.",
+            "ko": "예상 잔량을 설정합니다. 난로에 설정된 펠릿 용량 내의 정수 kg입니다.",
+            "ar": "اضبط التقدير المتبقي. بالكيلوغرامات الكاملة ضمن سعة الحبيبات المهيأة للموقد."
+          },
+          "value": 15,
+          "min": 1,
+          "max": 999
+        },
+        {
+          "id": "full_kg",
+          "type": "number",
+          "title": {
+            "en": "Full (kg)",
+            "nl": "Vol (kg)",
+            "de": "Voll (kg)",
+            "fr": "Plein (kg)",
+            "it": "Pieno (kg)",
+            "sv": "Full (kg)",
+            "no": "Full (kg)",
+            "es": "Llena (kg)",
+            "da": "Fuld (kg)",
+            "ru": "Заполнено (кг)",
+            "pl": "Pełny (kg)",
+            "ko": "가득 참 (kg)",
+            "ar": "ممتلئ (كغ)"
+          },
+          "hint": {
+            "en": "Set the remaining estimate to this amount. Whole kilograms, within the stove's configured pellet capacity.",
+            "nl": "Stel de resterende schatting in op dit aantal hele kilogrammen, binnen de ingestelde pelletcapaciteit.",
+            "de": "Restmenge auf diesen Wert setzen. Ganze Kilogramm innerhalb der eingestellten Pelletkapazität.",
+            "fr": "Définissez l’estimation restante. Kilogrammes entiers, dans la capacité de granulés configurée du poêle.",
+            "it": "Imposta la stima residua. Chilogrammi interi, entro la capacità pellet configurata della stufa.",
+            "sv": "Ange den återstående uppskattningen. Hela kilogram inom kaminens konfigurerade pelletskapacitet.",
+            "no": "Angi gjenværende estimat. Hele kilogram innenfor ovnens konfigurerte pelletkapasitet.",
+            "es": "Establece la estimación restante. Kilogramos enteros, dentro de la capacidad de pellets configurada.",
+            "da": "Angiv restestimatet. Hele kilogram inden for ovnens konfigurerede pillekapacitet.",
+            "ru": "Задайте расчётный остаток. Целые килограммы в пределах настроенной вместимости печи.",
+            "pl": "Ustaw szacowaną ilość pozostałą. Całe kilogramy w granicach skonfigurowanej pojemności pieca.",
+            "ko": "예상 잔량을 설정합니다. 난로에 설정된 펠릿 용량 내의 정수 kg입니다.",
+            "ar": "اضبط التقدير المتبقي. بالكيلوغرامات الكاملة ضمن سعة الحبيبات المهيأة للموقد."
+          },
+          "value": 30,
+          "min": 1,
+          "max": 999
+        }
+      ],
+      "api": {
+        "getState": {
+          "method": "GET",
+          "path": "/state"
+        },
+        "setControl": {
+          "method": "POST",
+          "path": "/control"
+        }
+      },
+      "id": "stove"
+    }
+  },
   "capabilities": {
     "measure_stove_cleaning_in": {
       "title": {
