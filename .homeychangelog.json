@@ -31,5 +31,8 @@
   },
   "1.0.10": {
     "en": "Fixed stalled polling by hardening request timeout and disconnect handling."
+  },
+  "1.0.11": {
+    "en": "Added pellet stove widget"
   }
 }
